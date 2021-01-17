@@ -20,7 +20,9 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
       make && make test
     workingDirectory: '$(Build.SourcesDirectory)/build'
     failOnStderr: true
+- task: gitsync@1
+  inputs:
+    GitRepoUrl: 'https://$(31c7808c99b2c2bab7255199560303b0adbfe57d)@github.com/linjintao/CEventLoop.git'
