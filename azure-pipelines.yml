@@ -19,6 +19,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-    make test
+      # Write your commands here
+      
+      make test
     workingDirectory: '$(Build.SourcesDirectory)/build'
     failOnStderr: true
