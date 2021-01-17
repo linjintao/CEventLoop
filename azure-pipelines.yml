@@ -9,12 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
 - task: CMake@1
   inputs:
     cmakeArgs: '../'
@@ -24,8 +18,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
-      
-      echo 'Hello world'
+    make test
     workingDirectory: '$(Build.SourcesDirectory)/build'
     failOnStderr: true
