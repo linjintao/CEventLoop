@@ -3,7 +3,7 @@
 #include "Logging.h"
 #include <stdlib.h>
 #include <algorithm>
-#include <strstream>
+#include <sstream>
 
 using namespace CEventLoop;
 
@@ -96,7 +96,7 @@ Logger& Logger::operator<<(int i)
 
 Logger& Logger::operator<<(std::thread::id id)
 {
-    std::strstream stream;
+    std::stringstream stream;
     stream << id;
     (*this) << stream.str();
     return *this;
