@@ -122,7 +122,7 @@ void CEventLoop::SocketsOps::ToIpPort(char* buf, size_t size, const sockaddr* ad
     size_t end = strlen(buf);
     auto addr4 = reinterpret_cast<const struct sockaddr_in*>(addr);
 
-    uint16_t port = ::be16toh(addr4->sin_port);
+    uint16_t port = be16toh(addr4->sin_port);
     snprintf(buf + end, size - end, ":%u", port);
 }
 
