@@ -4,10 +4,10 @@
 #include "../Logging.h"
 #include <thread>
 
-void ThreadFunc()
+void ThreadFunc(CEventLoop::EventLoop** loopOut)
 {
     CEventLoop::EventLoop loop;
-
+    *loopOut = &loop;
     loop.loop();
 }
 
@@ -15,7 +15,9 @@ void ThreadFunc()
 int main()
 {
     LOG_INFO << "Testing";
-    std::thread t(ThreadFunc);
+    return 0;
+    CEventLoop::EventLoop* loopThread = nullptr;
+    std::thread t(ThreadFunc, &loopThread);
     CEventLoop::EventLoop loop;
 
     loop.loop();

@@ -1,6 +1,6 @@
 
 
-add_executable(TestPoller "TestPoller.cc" "TestPoller2.cc")
+add_executable(TestPoller "TestPoller.cc")
 target_link_libraries(TestPoller CEventLoop)
 
 add_test(NAME test_poller COMMAND TestPoller)
