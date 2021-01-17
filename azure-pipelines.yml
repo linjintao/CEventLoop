@@ -21,6 +21,6 @@ steps:
     script: |
       # Write your commands here
       
-      make test
+      make && make test
     workingDirectory: '$(Build.SourcesDirectory)/build'
     failOnStderr: true
