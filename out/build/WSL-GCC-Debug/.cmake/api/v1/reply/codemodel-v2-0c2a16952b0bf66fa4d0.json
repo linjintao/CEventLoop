@@ -1,0 +1,203 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "CEventLoop",
+					"childIndexes" : 
+					[
+						2,
+						4,
+						5
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "CEventLoop",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "CEventLoop/Test",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "CEventLoop/Test",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "CEventLoop/Test/echo",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "CEventLoop/Test/echo",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "CEventLoop/ThirdParty/llhttp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "CEventLoop/ThirdParty/llhttp",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "CEventLoop/Http",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "CEventLoop/Http",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "CEventLoop",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "CEventLoop::@60b655803503b4933b50",
+					"jsonFile" : "target-CEventLoop-Debug-02d7289fb56b52d818a9.json",
+					"name" : "CEventLoop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "HttpServer::@e15d3801caf2cee3f002",
+					"jsonFile" : "target-HttpServer-Debug-89767356e5e4141071e6.json",
+					"name" : "HttpServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TestEventLoop::@470a6e094960ccba0a30",
+					"jsonFile" : "target-TestEventLoop-Debug-92a870c1846214ccfc12.json",
+					"name" : "TestEventLoop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TestEventLoopThreadPool::@470a6e094960ccba0a30",
+					"jsonFile" : "target-TestEventLoopThreadPool-Debug-51a8bdb089138fa81dbc.json",
+					"name" : "TestEventLoopThreadPool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TestPoller::@470a6e094960ccba0a30",
+					"jsonFile" : "target-TestPoller-Debug-27eae3bf4d44c66fe29a.json",
+					"name" : "TestPoller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TestTcpClient::@470a6e094960ccba0a30",
+					"jsonFile" : "target-TestTcpClient-Debug-7404b5762937aeb4407c.json",
+					"name" : "TestTcpClient",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "echo::@b06a600d9d00841c5b0d",
+					"jsonFile" : "target-echo-Debug-81c994cd8e125bbfb76b.json",
+					"name" : "echo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "llhttp::@676120cb9733df6200f0",
+					"jsonFile" : "target-llhttp-Debug-c3b2c34fec98f9826c23.json",
+					"name" : "llhttp",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/d/linux_projects/CEventLoop/out/build/WSL-GCC-Debug",
+		"source" : "/mnt/d/linux_projects/CEventLoop"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
