@@ -9,6 +9,7 @@
 #include <vector>
 #include <functional>
 #include <mutex>
+#include "TimerQueue.h"
 
 // TODO: Reference additional headers your program requires here.
 namespace CEventLoop
@@ -62,6 +63,8 @@ namespace CEventLoop
         mutable std::mutex mutex_;
         std::vector<Functor> pendingFunctors_;
         bool callingPendingFunctors_ = false;
+
+        TimerQueue timerQueue_;
 
         int wakeupFd_;
         std::unique_ptr<Channel> wakeupChannel_;

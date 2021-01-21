@@ -18,7 +18,8 @@ EventLoop::EventLoop() :
     threadId_(std::this_thread::get_id()),
     poller_(new Poller(this)),
     wakeupFd_(EventLoop::createWakeupEventFd()),
-    wakeupChannel_(new Channel(this, wakeupFd_))
+    wakeupChannel_(new Channel(this, wakeupFd_)),
+    timerQueue_(this)
 {
     LOG_TRACE << "EventLoop created " << this << " in thread " << threadId_;
     if (t_loopInThisThread != nullptr)

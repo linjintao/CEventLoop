@@ -30,7 +30,7 @@ Timestamp Poller::poll(int timeoutMs, ChannelList* activeChannels)
         LOG_SYSERR << "Poller::poll()";
     }
 
-    return Timestamp();
+    return Timestamp(0);
 }
 
 void Poller::fillActiveChannels(int numEvents, ChannelList* activeChannels) const

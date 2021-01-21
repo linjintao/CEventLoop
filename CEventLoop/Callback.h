@@ -21,6 +21,7 @@ namespace CEventLoop
     using EventCallback = std::function<void()>;
     using HighWaterMarkCallback = std::function<void(const TcpConnectionPtr, size_t)>;
     using ThreadInitCallback = std::function<void(EventLoop*)>;
+    using TimerCallback = std::function<void()>;
 
     enum class States
     {

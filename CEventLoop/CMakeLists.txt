@@ -20,7 +20,10 @@ add_library(CEventLoop STATIC "Poller.cc"
                               "Buffer.cc"
                               "TcpClient.cc"
                               "EventLoopThread.cc"
-                              "EventLoopThreadPool.cc") 
+                              "EventLoopThreadPool.cc"
+                              "Timestamp.cc"
+                              "Timer.cc"
+                              "TimerQueue.cc") 
 add_subdirectory ("Test")
 add_subdirectory("ThirdParty/llhttp")
 add_subdirectory("Http")

@@ -10,14 +10,27 @@ namespace CEventLoop
     class Timestamp
     {
     public:
-        Timestamp() : microSecondsSinceEpoch_(0)
+        Timestamp() = default;
+        Timestamp(int64_t epoch) : microsecondsSinceEpoch_(epoch)
         {
 
         }
 
+        int64_t microsecondsSinceEpoch() const {
+            return microsecondsSinceEpoch_;
+        }
 
+        inline bool operator<(Timestamp rhs) const
+        {
+            return this->microsecondsSinceEpoch_ < rhs.microsecondsPerSecond;
+        }
+
+        static Timestamp now();
+        static const int microsecondsPerSecond;
     private:
-        int64_t microSecondsSinceEpoch_;
+
+
+        int64_t microsecondsSinceEpoch_;
     };
 
 }
