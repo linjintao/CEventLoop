@@ -5,5 +5,5 @@
 int main()
 {
     CEventLoop::Poller poller(nullptr);
-    return 1;
+    return 0;
 }
